@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ファビコン -->
+  <link rel="icon" href="./img/favicon.ico" sizes="48x48"><!-- 48×48 -->
+  <link rel="icon" href="./img/favicon.svg" type="img/svg+xml">
+  <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" sizes="180x180"><!-- 180×180 -->
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- style.css 読み込み -->
+  <link rel="stylesheet" href="./css/lightbox.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <!-- Google Fonts 読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zen+Kurenaido&display=swap"
+    rel="stylesheet">
+
+  <title>Portfolio Site</title>
+</head>
+
+<body>
+  <header>
+    <div class="navSection">
+      <div class="logoArea">
+        <a href="#index.html">
+          <h1 class="capitalize">
+            <img src="./img/logo.webp" alt="icon" class="icon">
+            portfolio site
+          </h1>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="menu">
+    <nav>
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="#portfolio">作品</a>
+          </li>
+          <li>
+            <a href="#career">略歴</a>
+          </li>
+          <li>
+            <a href="#skill">技能</a>
+          </li>
+          <li>
+            <a href="#qualification">資格</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="toggleBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
+  </div>
+
+  <!-- MV -->
+  <section>
+    <div class="mvArea">
+      <img src="./img/mv.png" alt="mv">
+      <!-- スクロールガイド -->
+      <div class="scroll">
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- プロフィール-->
+  <section>
+    <div class="topics">
+      <div class="personal">
+        <img src="img/fece.png" alt="プロフィール写真" class="face">
+
+        <div class="profile">
+          <h2 class="capitalize">profile</h2>
+          <table>
+            <tr>
+              <td class="item acquisition">名前：</td>
+              <td class="capitalize">toshinori shimohara</td>
+            </tr>
+            <tr>
+              <td class="item">生年月日：</td>
+              <td>1990年4月25日</td>
+            </tr>
+            <tr>
+              <td class="item">出身地：</td>
+              <td>広島県</td>
+            </tr>
+          </table>
+          <!-- ここに一言アピールを挿入 -->
+          <div class="comment">
+            <p>　ご閲覧いただきありがとうございます。<br>
+              私の座右の銘は『寄り道力』です。<br>
+              　一見遠回りに思える経験や試行錯誤に直面した際にも気づきを得て、そして軌道修正を繰り返してきました。<br>
+              　最短距離を目指しつつも固執はせず、楽しみながら柔軟に進み続ける姿勢を、私は『寄り道力』と呼んでいます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 作品 -->
+  <section>
+    <!-- サイト -->
+    <div class="topics" id="portfolio">
+      <div class="category">
+        <img src="./img/portfolio.png" alt="portfolio">
+        <h2>作品</h2>
+        <p class="capitalize subtitle">portfolio</p>
+      </div>
+
+      <div class="gallery">
+        <h3 class="capitalize">&#12304;site&#12305;<br><span>※webサイト作品については、作品名をクリックするとサイトページに偏移します</span></h3>
+        <div class="galleryConainer site">
+          <div class="galleryWrap">
+            <a href="./img/arari.png" target="_blank" rel="noopener noreferrer" data-lightbox="site1" data-title="粗利の計算機<br>コーディングに興味を持つきっかけとなったサイトです。<br>
+              調達蒔の価格＋売価、粗利、粗利率のいずれかを入力すると計算でき、
+              高額決裁を上司に申請するためのテンプレートまで出力できます。<br>
+              このサイトは1年間で約1万回の利用があり、Google検索では複数の検索ワードで上位に表示されます。">
+              <img src="./img/site1.png" alt="粗利の計算機">
+            </a>
+            <h4>粗利の計算機</h4>
+            <button>
+              <a href="https://www.qtab1.net/" target="_blank" rel="noopener noreferrer">サイト</a>
+            </button>
+          </div>
+
+          <div class="galleryWrap">
+            <a href="./img/ippa.png" target="_blank" rel="noopener noreferrer" data-lightbox="site2" data-title="株式会社IPPA<br>架空の企業のコーポレートサイトを作成しました。<br>
+              Figmaでデザインカンプを作成し、一部の素材でPremiere Proで編集した動画や、Photoshopで加工した画像を使用しました。<br>
+              またロゴについてはIllustratorを使用し、IPPAの文字を組み合わせ、広大な海へ漕ぎだす船をイメージしてロゴを作成しました。">
+              <img src="./img/site2.png" alt="株式会社IPPA" target="_blank" rel="noopener noreferrer">
+            </a>
+            <h4 class="uppercase">株式会社ippa</h4>
+            <button>
+              <a href="https://www.qtab1.net/" target="_blank" rel="noopener noreferrer">サイト</a>
+            </button>
+            <button>
+              <a href="./img/ippaWf.png" target="_blank" rel="noopener noreferrer">ワイヤーフレーム</a>
+            </button>
+          </div>
+
+          <div class="galleryWrap">
+            <a href="./img/esorado.png" target="_blank" rel="noopener noreferrer" data-lightbox="site3" data-title="エソラ堂<br>訓練校にて作成。<br>
+              個人的なLPを持ちたいと考えているクラスメイトがいたため、チーム課題として題材に取り上げ、協力して取り組みました。<br>
+              ベースとなるhtmlとcssの作成を行ってチームへと展開したり、役割分担の指示役を買って出たりしました。<br>
+              また、チーム内でそれぞれ作成したコードの統合／調整を担当しました。">
+              <img src="./img/site3.png" alt="エソラ堂" target="_blank" rel="noopener noreferrer">
+            </a>
+            <h4>エソラ堂</h4>
+            <button>
+              <a href="https://www.qtab1.net/" target="_blank" rel="noopener noreferrer">サイト</a>
+            </button>
+            <button>
+              <a href="./img/esoraComp.jpg" target="_blank" rel="noopener noreferrer">デザインカンプ</a>
+            </button>
+          </div>
+        </div>
+        <!-- デザインカンプやコンセプトコメント等を入れる -->
+      </div>
+
+
+      <!-- ロゴ -->
+      <div class="gallery">
+        <h3 class="capitalize">&#12304;logo&#12305;</h3>
+
+        <div class="galleryConainer logo">
+          <div class="galleryWrap">
+            <a href="./img/owlLogo1.jpg" target="_blank" rel="noopener noreferrer" data-lightbox="logo1" data-title="シマフクロウロゴ1<br>日本野鳥の会「シマフクロウ ロゴマーク」デザインコンテスト応募作品です。<br>
+              木に留まって静かに見守っているシマフクロウをイメージして、illustratorでパスを使用して作成しました。">
+              <img src="./img/owlLogo1.jpg" alt="シマフクロウロゴ1">
+            </a>
+            <h4>シマフクロウロゴ1</h4>
+            <p class="text capitalize"></p>
+          </div>
+
+          <div class="galleryWrap">
+            <a href="./img/owlLogo2.jpg" target="_blank" rel="noopener noreferrer" data-lightbox="logo2" data-title="シマフクロウロゴ2<br>応募作品とは別に、パスの練習を兼ねて作成しました。<br>
+              横からではなく正面から捉えた構図にすることで応募作品と差別化し、応募作品と比べて更に丸い印象を作るため、ひらがなを採用しました。">
+              <img src="./img/owlLogo2.jpg" alt="シマフクロウロゴ2">
+            </a>
+            <h4>シマフクロウロゴ2</h4>
+          </div>
+
+          <!-- ダミー -->
+          <div class="galleryWrap dummy">
+            <a href="">
+              <img src="" alt="">
+              <h4></h4>
+            </a>
+            <p class="text"></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ショップカード -->
+      <div class="gallery">
+        <h3 class="capitalize">&#12304;card&#12305;</h3>
+
+        <div class="galleryConainer card">
+          <div class="galleryWrap">
+            <a href="./img/shopCard1a.webp" target="_blank" rel="noopener noreferrer" data-lightbox="card1" data-title="ショップカード1（表面）<br>架空のショップを基にショップカードを作成しました。<br>
+              キャラクターと地図はパスで作成し、パンの柔らかさや安心のイメージが伝わるように、茶色ベースで仕上げました。">
+              <img src="./img/shopCard1a.webp" alt="ショップカード1（表面）">
+            </a>
+            <a href="./img/shopCard1b.webp" target="_blank" rel="noopener noreferrer" data-lightbox="card1" data-title="ショップカード1（裏面）<br>架空のショップを基にショップカードを作成しました。<br>
+              キャラクターと地図はパスで作成し、パンの柔らかさや安心のイメージが伝わるように、茶色ベースで仕上げました。" hidden>
+            </a>
+            <h4>ショップカード1</h4>
+          </div>
+
+          <div class="galleryWrap">
+            <a href="./img/shopCard2a.webp" target="_blank" rel="noopener noreferrer" data-lightbox="card2" data-title="ショップカード2（表面）<br>『ベーカリーペコラ』の題材はそのままに、より大人な印象を与えるなら？というコンセプトで作成しました。<br>
+              落ち着いた雰囲気が伝わるよう、暗めの色を選択しましたが、メインカラーとしてパンを彷彿とさせるような茶色を残したかったため、コントラストとして青系のベースカラーを選択しました。">
+              <img src="./img/shopCard2a.webp" alt="ショップカード2（表面）">
+            </a>
+            <a href="./img/shopCard2b.webp" target="_blank" rel="noopener noreferrer" data-lightbox="card2" data-title="ショップカード2（裏面）
+              『ベーカリーペコラ』の題材はそのままに、より大人な印象を与えるなら？というコンセプトで作成しました。<br>
+              落ち着いた雰囲気が伝わるよう、暗めの色を選択しましたが、メインカラーとしてパンを彷彿とさせるような茶色を残したかったため、コントラストとして青系のベースカラーを選択しました。" hidden>
+            </a>
+            <h4>ショップカード2</h4>
+          </div>
+
+          <div class="galleryWrap dummy">
+            <a href="">
+              <img src="" alt="">
+              <h4></h4>
+            </a>
+            <p class="text"></p>
+          </div>
+        </div>
+
+        <!-- バナー作成 -->
+        <div class="gallery">
+          <h3 class="capitalize subtitle">&#12304;banner&#12305;</h3>
+
+          <div class="galleryConainer banner">
+            <div class="galleryWrap">
+              <a href="./img/sweetsBanner1.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner1"
+                data-title="スイーツフェアバナー<br>同じテーマで5種類のバナーを作成しました。<br>
+                デザイン自体をお菓子のようにしたいと考え、暗めの背景に明るい文字を加算せてチョコスプレーのように散りばめました。">
+                <img src="./img/sweetsBanner1.webp" alt="banner1">
+              </a>
+              <a href="./img/sweetsBanner2.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner1"
+                data-title="スイーツフェアバナー<br>同じテーマで5種類のバナーを作成しました。<br>
+                デザイン自体をお菓子のようにしたいと考え、暗めの背景に明るい文字を加算せてチョコスプレーのように散りばめました。" hidden>
+              </a>
+              <a href="./img/sweetsBanner3.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner1"
+                data-title="スイーツフェアバナー<br>同じテーマで5種類のバナーを作成しました。<br>
+                デザイン自体をお菓子のようにしたいと考え、暗めの背景に明るい文字を加算せてチョコスプレーのように散りばめました。" hidden>
+              </a>
+              <a href="./img/sweetsBanner4.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner1"
+                data-title="スイーツフェアバナー<br>同じテーマで5種類のバナーを作成しました。<br>
+                デザイン自体をお菓子のようにしたいと考え、暗めの背景に明るい文字を加算せてチョコスプレーのように散りばめました。" hidden>
+              </a>
+              <a href="./img/sweetsBanner5.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner1"
+                data-title="スイーツフェアバナー<br>同じテーマで5種類のバナーを作成しました。<br>
+                デザイン自体をお菓子のようにしたいと考え、暗めの背景に明るい文字を加算せてチョコスプレーのように散りばめました。" hidden>
+              </a>
+              <h4>スイーツフェアバナー</h4>
+            </div>
+
+            <div class="galleryWrap">
+              <a href="./img/christmasBanner1.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner2"
+                data-title="クリスマスバナー1<br>茶色いデザインが続いたため、背景や文字に茶色を使わないデザインとして作成しました。<br>
+                「特別な日」を演出するために、積極的に輝くようなグラデーションを採用しました。">
+                <img src="./img/christmasBanner1.webp" alt="クリスマスバナー1">
+              </a>
+              <a href="./img/christmasBanner2.webp" target="_blank" rel="noopener noreferrer" data-lightbox="banner2"
+                data-title="クリスマスバナー2<br>茶色いデザインが続いたため、背景や文字に茶色を使わないデザインとして作成しました。<br>
+                「特別な日」を演出するために、積極的に輝くようなグラデーションを採用しました。" hidden>
+              </a>
+              <h4>クリスマスバナー</h4>
+            </div>
+
+            <div class="galleryWrap">
+              <a href="./img/townBanner.jpg" target="_blank" rel="noopener noreferrer" data-lightbox="banner3"
+                data-title="タウン誌バナー<br>タウン誌の作成に加え、復習としてバナーを作成しました。<br>
+                情報際サイトのバナーエリアに掲載することを想定して、300×250pxで作成しました。">
+                <img src="./img/townBanner.jpg" alt="タウン誌バナー">
+              </a>
+              <h4>タウン誌バナー</h4>
+            </div>
+
+            <div class="galleryWrap">
+              <a href="./img/trabelBanner.jpg" target="_blank" rel="noopener noreferrer" data-lightbox="banner4"
+                data-title="旅行誌バナー<br>旅行誌の作成に加え、復習としてバナーを作成しました。<br>
+                情報際サイトのバナーエリアに掲載することを想定して、300×250pxで作成しました。">
+                <img src="./img/trabelBanner.jpg" alt="旅行誌バナー">
+              </a>
+              <h4>旅行誌バナー</h4>
+            </div>
+
+            <div class="galleryWrap dummy">
+              <a href="">
+                <img src="" alt="">
+                <h4></h4>
+              </a>
+              <p class="text"></p>
+            </div>
+
+            <div class="galleryWrap dummy">
+              <a href="">
+                <img src="" alt="">
+                <h4></h4>
+              </a>
+              <p class="text"></p>
+            </div>
+
+          </div>
+
+
+          <!-- 雑誌の表紙作成 -->
+          <div class="gallery">
+            <h3 class="capitalize">&#12304;magazine&#12305;</h3>
+
+            <div class="galleryConainer magazine">
+              <div class="galleryWrap">
+                <a href="./img/town.webp" target="_blank" rel="noopener noreferrer" data-lightbox="gallery13"
+                  data-title="タウン誌<br>広島の架空のタウン誌として雑誌の表紙を作成ました。<br>
+                  県外の友人が市内や有名な観光地しか行ったことがないというエピソードから、<br>
+                  手に取りやすい王道ルートと、見ているうちに行きたくなるようなちょっと変わったルートを対決させてみました。">
+                  <img src="./img/town.webp" alt="タウン誌">
+                </a>
+                <h4>タウン誌</h4>
+              </div>
+
+              <div class="galleryWrap">
+                <a href="./img/travel.webp" target="_blank" rel="noopener noreferrer" data-lightbox="gallery14"
+                  data-title="旅行誌<br>表紙がシンプルな構成の旅行誌です。<br>
+                  30〜40代の1人でプチ旅行を楽しむアウトドア派の男性をターゲットに、旅行のための総合雑誌のイメージで作成しました。">
+                  <img src="./img/travel.webp" alt="旅行誌">
+                </a>
+                <h4>旅行誌</h4>
+              </div>
+
+              <!-- ダミー -->
+              <div class="galleryWrap dummy">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <img src="" alt="">
+                  <h4></h4>
+                </a>
+                <p class="text"></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <!-- プロフィール -->
+    <div class="topics" id="career">
+      <div class="category">
+        <img src="./img/biography.png" alt="biography" width="100%">
+        <h2>略歴</h2>
+        <p class="capitalize subtitle">career</p>
+      </div>
+      <div class="content">
+        <p class="capitalize">
+          　株式会社サカイ引越センター、日本歯科医師会での事務経験を経て株式会社サードウェーブに入社。<br>
+          　新しい施策を模索する「1人部署」ような役割を中心に、マニュアルの充実やルールの整備を行う。<br>
+          　直近では6年ほど営業アシスタント業務に従事し、その傍らでディストリビューターが持つ会員サイト上に自社製品の掲載・管理を行い、認知度向上に寄与する。<br>
+          　特に会員サイトへの掲載管理については「何かしら形だけでも掲載していればよい」という、問い合わせゼロ状態からスタートし、「オーダーメイドでの相談ベースの問い合わせが基本」という世界の中で、問い合わせの1割が「サイト掲載品そのままの構成で欲しい」という状態になるまで拡充を行った。<br>
+          <br>
+          　<span class="uppercase">itパスポート</span>の取得をきっかけにコーディングに興味を持ち、独学で<span class="uppercase">html /css /</span>
+          javascriptを学ぶ。<br>
+          学習のアウトプットとして、「分からないことを分かるようになるまで咀嚼する力」と「課題解決を形にする姿勢」を活かし、WEBアプリ『粗利の計算機』を企画・開発・リリース。<br>
+          　本アプリは1年間で累計1万アクセスを達成し、google検索においては半年以上にわたり検索結果3位以内を維持している。<br>
+          <br>
+          　開発を通じて、自身の課題としてデザイン知識の不足やコーディングルールの理解不足を認識し、現在はそれらの強化を目的にリスキリングに取り組んでいる。<br>
+          　課題と感じたことには積極的に挑戦し、基礎を大切にしながら継続的に成長できるエンジニアを目指せるよう取り組んでいる。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- 技能 -->
+    <div class="topics" id="skill">
+      <div class="category">
+        <img src="./img/skill.png" alt="skill">
+        <h2>技能</h2>
+        <p class="capitalize subtitle">skill</p>
+      </div>
+      <div class="content">
+        <table>
+          <tr>
+            <th></th>
+            <th>ツール</th>
+            <th>レベル</th>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/microsoft-word-2019.png"
+                alt="microsoft-word-2019" />
+            </td>
+            <td class="item capitalize">word</td>
+            <td>取引先に提出する文書の作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/microsoft-excel-2019.png"
+                alt="microsoft-excel-2019" />
+            </td>
+            <td class="item capitalize">excel</td>
+            <td>関数の使用、データ集計、グラフの作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/ms-powerpoint.png"
+                alt="ms-powerpoint" />
+            </td>
+            <td class="item capitalize">power point</td>
+            <td>社内業務のマニュアル作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/html-5.png" alt="html-5" />
+            </td>
+            <td class="uppercase">html</td>
+            <td>実用的な静的サイトの作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/css3.png" alt="css3" />
+            </td>
+            <td class="uppercase">css</td>
+            <td>実用的な静的サイトの作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/figma.png" alt="figma" />
+            </td>
+            <td class="item capitalize">Figma</td>
+            <td>サイト作成のためのデザインカンプの作成が可能</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/adobe-illustrator.png"
+                alt="adobe-illustrator" />
+            </td>
+            <td class="item capitalize">adobe illustrator</td>
+            <td>簡単なバナーや広告の作成に活用できる</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/adobe-photoshop.png"
+                alt="adobe-photoshop" />
+            </td>
+            <td class="item capitalize">adobe photoshop</td>
+            <td>簡単なバナーや広告の作成に活用できる</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/adobe-premiere-pro.png"
+                alt="adobe-premiere-pro" />
+            </td>
+            <td class="item capitalize">adobe premiere pro</td>
+            <td>ビジネス用途の簡単なWeb CMを編集・制作できる</td>
+          </tr>
+        </table>
+        <p class="credit"><small>アイコン by <span class="capitalize">icons8</span></small></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- 資格 -->
+    <div class="topics" id="qualification">
+      <div class="category">
+        <img src="./img/qualification.png" alt="qualification">
+        <h2>資格</h2>
+        <p class="capitalize subtitle">qualification</p>
+      </div>
+      <div class="content">
+        <table>
+          <tr>
+            <th></th>
+            <th>取得年月</th>
+            <th>資格名</th>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/accounting.png"
+                alt="accounting" />
+            </td>
+            <td class="item acquisition">2007年11月</td>
+            <td>日本商工会議所及び各地商工会議所主催<br>簿記検定試験3級</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/suv.png" alt="suv" />
+            </td>
+            <td class="item">2013年3月</td>
+            <td>普通自動車一種免許</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/library-building.png"
+                alt="library-building" />
+            </td>
+            <td class="item">2013年3月</td>
+            <td>図書館司書資格</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/ms-excel.png" alt="ms-excel" />
+            </td>
+            <td class="item">2019年2月</td>
+            <td class="capitalize">microsoft office specialist office excel 2016</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/knowledge.png" alt="knowledge" />
+            </td>
+            <td class="item">2023年8月</td>
+            <td>ITパスポート試験</td>
+          </tr>
+          <tr>
+            <td class="symbol">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-color/48/web.png" alt="web" />
+            </td>
+            <td class="item">2025年12月</td>
+            <td class="capitalize">webクリエイター能力認定試験 エキスパート</td>
+          </tr>
+        </table>
+        <p class="credit"><small>アイコン by <span class="capitalize">icons8</span></small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- スクロール追従お問い合わせ -->
+  <div class="contactBox">
+    <a href="./contact.html" class="contactButton">
+      <img src="./img/mail.png" alt="コンタクト">
+      <p class="contactText">お問い合わせはこちら</p>
+    </a>
+  </div>
+
+
+
+  <footer>
+    <div class="footerMenu">
+      <nav>
+        <div class="inner">
+          <ul>
+            <li>
+              <a href="#portfolio">作品</a>
+            </li>
+            <li>
+              <a href="#career">略歴</a>
+            </li>
+            <li>
+              <a href="#skill">技能</a>
+            </li>
+            <li>
+              <a href="#qualification">資格</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="copyright uppercase">&copy; 2026 st</div>
+  </footer>
+  <script src="./js/lightbox-plus-jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
