@@ -242,14 +242,23 @@ h2 {
     object-fit: cover;
 }
 
-.galleryWrap>a {
-    width: 100%;
-    height: 320px;
-    /* ← h4を揃えるための基準 */
-    display: flex;
-    align-items: flex-end;
-    /* ← 画像を下揃え */
-    justify-content: center;
+.galleryWrap .button {
+    display: block;
+    border: 1px solid #fefefe;
+    padding: 16px;
+    border-radius: 32px;
+    margin: 0 auto 16px;
+    width: 240px;
+    text-align: center;
+    background-color: #3a4f9c;
+}
+
+/* ホバーした時に色を変える */
+.galleryWrap .button:hover {
+    color: #3a4f9c;
+    background-color: #bbdaf7;
+    padding: 16px;
+    border-radius: 32px;
 }
 
 .galleryWrap img {
@@ -290,25 +299,6 @@ h4 {
     text-align: center;
 }
 
-.galleryWrap button {
-    display: block;
-    border: 1px solid #fefefe;
-    padding: 16px;
-    border-radius: 32px;
-    margin: 0 auto 16px;
-    width: 240px;
-    text-align: center;
-    background-color: #3a4f9c;
-}
-
-/* ホバーした時に色を変える */
-.galleryWrap button:hover {
-    color: #3a4f9c;
-    background-color: #bbdaf7;
-    padding: 16px;
-    border-radius: 32px;
-}
-
 /* career */
 #career .content {
     max-width: 80%;
@@ -338,7 +328,7 @@ h4 {
 }
 
 /* コンタクト */
-.contactArea{
+.contactArea {
     margin: 32px auto;
     width: 560px;
 }
@@ -354,9 +344,9 @@ h4 {
 }
 
 .contactArea img {
-max-width: 160px;
-display: block;
-margin: 0 auto;
+    max-width: 160px;
+    display: block;
+    margin: 0 auto;
 }
 
 .contactBox {

@@ -209,12 +209,12 @@
         cursor: pointer;
     }
 
-/* mv */
+    /* mv */
 
-.mvArea img {
-    height: 80vh;
-    object-fit: cover;
-}
+    .mvArea img {
+        height: 80vh;
+        object-fit: cover;
+    }
 
     /*プロフィール*/
     .personal {
@@ -262,6 +262,7 @@
 
     .galleryWrap {
         width: 100%;
+        align-items: center;
     }
 
     .galleryInner {
@@ -289,9 +290,10 @@
     }
 
     /* 技能 */
-    #qualification{
+    #qualification {
         margin-bottom: 160px;
     }
+
     .content table {
         margin: 0 auto;
     }
