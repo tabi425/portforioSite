@@ -1,11 +1,30 @@
-
-
-
-
 const nav = document.querySelector("#menu");
 const btn = document.querySelector(".toggleBtn");
 const mask = document.querySelector("#mask");
+const mode = document.getElementById("modeToggle");
+const navSection = document.querySelector(".navSection")
 
+
+// ライト／ダークモード切替
+// if (localStorage.getItem('isDark') === 'true') {
+//     document.body.classList.add('isDark');
+// }
+if (localStorage.getItem('isDark') === 'true') {
+    document.getElementById('modeToggle').checked = true;
+}
+
+if (mode) {
+    mode.addEventListener("click", () => {
+        document.body.classList.toggle("isDark");
+        if (navSection) {
+            navSection.classList.toggle("isDark");
+        }
+        localStorage.setItem('isDark', document.body.classList.contains('isDark'));
+    });
+}
+
+
+// ハンバーガーメニュー
 const openNav = () => {
     nav.classList.add("open");
     nav.classList.remove("close");
@@ -27,8 +46,8 @@ btn.addEventListener("click", () => {
 mask.addEventListener("click", closeNav);
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // ページのスクロールを検知したら「TOPへ戻る」ボタンを表示させる
+// ページのスクロールを検知したら「TOPへ戻る」ボタンを表示させる
+document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('scroll', () => {
         const topBtn = document.querySelector('.contactBox');
 

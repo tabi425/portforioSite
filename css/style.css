@@ -1,5 +1,24 @@
 @charset "utf-8";
 
+:root {
+    --header-h: 80px;
+
+    --black: #333;
+    --white: #fefefe;
+    --submitWhite: #e4e4e4;
+    --lightGreen: #7ac78d;
+    --lightBlue: #6ab9fa;
+    --whiteGray: #ccc;
+    --blue: #3a4f9c;
+    --skyBlue: #bbdaf7;
+
+    --gray: #6c757d;
+    --darkBlue: #070341;
+    --warmOrange: #f3cbae;
+    --orange: #dd9d6f;
+
+}
+
 /* 共通 */
 html {
     scroll-behavior: smooth;
@@ -18,8 +37,8 @@ body {
     padding: 0;
     font-family: "Ubuntu", "Zen Kurenaido", sans-serif;
     font-size: 1.2em;
-    background: linear-gradient(to right, #7ac78d, #6ab9fa);
-    color: #fefefe;
+    background: linear-gradient(to right, var(--lightGreen), var(--lightBlue));
+    color: var(--white);
 }
 
 section {
@@ -30,7 +49,7 @@ section {
 .topics {
     padding-bottom: 32px;
     margin: 0 auto 32px;
-    border-bottom: 3px ridge #fefefe;
+    border-bottom: 3px ridge var(--white);
 }
 
 .credit {
@@ -43,7 +62,7 @@ section {
     font-size: 1.8em;
     display: flex;
     align-items: center;
-
+    padding-top: 32px;
 }
 
 .icon {
@@ -51,11 +70,7 @@ section {
     border-radius: 16px;
     margin: 0 8px;
     padding: 8px;
-    background-color: #FEFEFE;
-}
-
-:root {
-    --header-h: 80px;
+    background-color: var(--white);
 }
 
 .navSection {
@@ -63,14 +78,14 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 24px 5%;
+    padding: 32px 5% 80px;
     height: var(--header-h);
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    background: linear-gradient(to right, #7ac78d, #6ab9fa);
+    background: linear-gradient(to right, var(--lightGreen), var(--lightBlue));
 }
 
 h1 {
@@ -81,13 +96,76 @@ h1 {
     vertical-align: middle;
 }
 
+/* カラーモードドグル */
+.mode {
+    z-index: 1000;
+    display: flex;
+    gap: 16px;
+    position: fixed;
+    padding: 32px 0;
+    top: -24px;
+    right: 16px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.modeToggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 16px;
+}
+
+.toggleInput {
+    position: absolute;
+    width: 12%;
+    height: 20%;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.toggleLabel {
+    width: 32px;
+    height: 16px;
+    background: var(--whiteGray);
+    position: relative;
+    display: inline-block;
+    border-radius: 32px;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.toggleLabel:after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.toggleInput:checked+.toggleLabel {
+    background-color: var(--warmOrange);
+}
+
+.toggleInput:checked+.toggleLabel:after {
+    left: 16px;
+}
+
 /* menu */
 #menu {
     z-index: 1000;
+    display: flex;
     position: fixed;
     padding: 32px 0;
-    top: 0;
-    right: 32px;
+    top: 8px;
+    right: 16px;
     white-space: nowrap;
 }
 
@@ -108,7 +186,7 @@ h1 {
 /* mv */
 .mvArea {
     text-align: center;
-    margin: 88px auto 64px;
+    margin: 112px auto 64px;
     position: relative;
 }
 
@@ -123,7 +201,7 @@ h1 {
     margin-inline: auto;
     width: fit-content;
     position: absolute;
-    top: 80%;
+    top: 77%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -131,7 +209,7 @@ h1 {
 /* マウスホイール */
 .scroll::before {
     animation: 2s scroll infinite;
-    background: #fefefe;
+    background: var(--white);
     border-radius: 3px;
     content: "";
     height: 12px;
@@ -144,7 +222,7 @@ h1 {
 
 /* マウス */
 .scroll::after {
-    border: 2px solid #fefefe;
+    border: 2px solid var(--white);
     border-radius: 16px;
     content: "";
     display: block;
@@ -214,7 +292,7 @@ h2 {
 
 .gallery {
     margin-bottom: 16px;
-    border-bottom: 3px dotted #fefefe;
+    border-bottom: 3px dotted var(--white);
 }
 
 .gallery:last-child {
@@ -226,7 +304,7 @@ h2 {
     font-size: 0.7em;
 }
 
-.galleryConainer {
+.galleryContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -244,19 +322,19 @@ h2 {
 
 .galleryWrap .button {
     display: block;
-    border: 1px solid #fefefe;
+    border: 1px solid var(--white);
     padding: 16px;
     border-radius: 32px;
     margin: 0 auto 16px;
     width: 240px;
     text-align: center;
-    background-color: #3a4f9c;
+    background-color: var(--blue);
 }
 
 /* ホバーした時に色を変える */
 .galleryWrap .button:hover {
-    color: #3a4f9c;
-    background-color: #bbdaf7;
+    color: var(--blue);
+    background-color: var(--skyBlue);
     padding: 16px;
     border-radius: 32px;
 }
@@ -317,7 +395,7 @@ h4 {
 .content table tr,
 .content table th,
 .content table td {
-    border: solid 1px #fefefe;
+    border: solid 1px var(--white);
     vertical-align: middle;
     padding: 8px;
 }
@@ -337,10 +415,10 @@ h4 {
     display: block;
     font-size: 1.2em;
     text-align: center;
-    color: #3a4f9c;
+    color: var(--blue);
     padding: 16px 0 32px;
     border-radius: 8px;
-    background-color: #fefefe;
+    background-color: var(--white);
 }
 
 .contactArea img {
@@ -352,9 +430,9 @@ h4 {
 .contactBox {
     position: fixed;
     top: 80%;
-    right: 4%;
+    right: 16px;
     z-index: 1000;
-    box-shadow: 2px #333333;
+    box-shadow: 2px var(--black);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
@@ -370,7 +448,7 @@ h4 {
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    color: #3a4f9c;
+    color: var(--blue);
     min-width: 128px;
     text-wrap: wrap;
 }
@@ -383,7 +461,7 @@ h4 {
     align-items: center;
     justify-content: center;
     padding: 80px;
-    background-color: #FEFEFE;
+    background-color: var(--white);
     border-radius: 60%;
     text-decoration: none;
     color: inherit;
@@ -413,11 +491,11 @@ footer {
     gap: 32px;
 }
 
-/* コンタクト下層ページ */
+/* 下層ページ（お問い合わせ） */
 #formWrap {
     max-width: 960px;
     margin: 128px auto 64px;
-    color: #fefefe;
+    color: var(--white);
     line-height: 120%;
     font-size: 90%;
     margin-bottom: 8px;
@@ -431,18 +509,18 @@ table.formTable {
     width: 100%;
     margin-bottom: 8px;
     border-collapse: collapse;
-    color: #333;
+    color: var(--black);
 }
 
 input {
-    color: #333;
+    color: var(--black);
 }
 
 table.formTable td,
 table.formTable th {
-    border: 1px solid #ccc;
+    border: 1px solid var(--whiteGray);
     padding: 12px;
-    background: #fefefe;
+    background: var(--white);
 }
 
 table.formTable th {
@@ -459,25 +537,69 @@ table.formTable th {
 input,
 textarea,
 select {
-    border: 1px solid #333;
-    background-color: #fff;
+    border: 1px solid var(--black);
+    background-color: var(--white);
     padding: 4px 6px;
     font-size: inherit;
 }
 
 input[type="submit"],
 input[type="reset"] {
-    border: 1px solid #333;
-    background-color: #f2f2f2;
+    border: 1px solid var(--black);
+    background-color: var(--white);
     padding: 8px 16px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #e0e0e0;
+    background-color: var(--submitWhite);
 }
 
 .caution {
     margin-bottom: 32px;
+}
+
+/* ダークモード */
+/* ダークモード用の背景*/
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to right, var(--gray), var(--darkBlue));
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: -1;
+}
+
+/* ダークモード用の背景（ヘッダー）*/
+.navSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--gray), var(--darkBlue));
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: -1;
+}
+
+/* isDarkがついたら透明化を解除 */
+body.isDark::before,
+body.isDark .navSection::before {
+    opacity: 1;
+}
+
+/* bodyがダークモードになった時の、一部の要素の色を変更*/
+body.isDark .galleryWrap .button {
+    background-color: var(--orange);
+}
+
+body.isDark .galleryWrap .button:hover {
+    color: var(--darkBlue);
+    background-color: var(--warmOrange);
+}
+
+body.isDark .gallery:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
 }

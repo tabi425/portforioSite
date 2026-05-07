@@ -12,12 +12,28 @@
     }
 
     /* ヘッダー */
-    .navSection {
-        display: block;
-    }
-
     h1 {
         align-items: center;
+    }
+
+    /* カラーモード */
+    .mode {
+        z-index: 1000;
+        display: flex;
+        gap: 16px;
+        position: fixed;
+        padding: 32px 0;
+        top: -24px;
+        right: 6px;
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+    .modeToggle {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        margin: 16px;
     }
 
     /* ハンバーガーメニュー */
@@ -28,19 +44,20 @@
     nav {
         display: block;
         position: fixed;
-        background-color: #fefefe;
+        background-color: var(--white);
         width: 240px;
         top: -240px;
         left: 0;
         bottom: 0;
         transition: all 0.5s;
-        z-index: 1000;
         opacity: 0;
+        pointer-events: none;
     }
 
     .open nav {
         top: 0;
         opacity: 1;
+        pointer-events: auto;
     }
 
     nav .inner {
@@ -55,7 +72,7 @@
 
     nav .inner ul li {
         margin: 0;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--black);
     }
 
     nav .inner ul li a {
@@ -90,14 +107,14 @@
     }
 
     nav .inner ul li:hover {
-        background: #e4e4e4;
+        background: var(--submitWhite);
     }
 
     .toggleBtn {
         display: block;
         position: fixed;
         top: 32px;
-        right: 32px;
+        right: 8px;
         width: 32px;
         height: 32px;
         z-index: 1000;
@@ -110,7 +127,7 @@
         left: 0;
         width: 32px;
         height: 2px;
-        background-color: #fefefe;
+        background-color: var(--white);
         transition: all 0.5s;
         border-radius: 4px;
     }
@@ -128,7 +145,7 @@
     }
 
     .open .toggleBtn span {
-        background-color: #fefefe;
+        background-color: var(--white);
     }
 
     .open .toggleBtn span:nth-child(1) {
@@ -151,7 +168,7 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        border: 2px solid #fefefe;
+        border: 2px solid var(--white);
         transform: translate(-50%, -50%) rotate(0deg);
         opacity: 0;
     }
@@ -190,15 +207,15 @@
         }
     }
 
-
     #mask {
         display: none;
         transition: all 0.5s;
+        z-index: 0;
     }
 
     .open #mask {
         display: block;
-        background: #333;
+        background: var(--black);
         width: 100%;
         height: 100%;
         top: 0;
@@ -210,7 +227,6 @@
     }
 
     /* mv */
-
     .mvArea img {
         height: 80vh;
         object-fit: cover;
@@ -258,7 +274,6 @@
         text-align: center;
         margin-bottom: 24px;
     }
-
 
     .galleryWrap {
         width: 100%;
@@ -308,7 +323,6 @@
         display: none;
     }
 
-
     /* コンタクト */
     #formWrap {
         width: 95%;
@@ -330,7 +344,6 @@
         text-align: left;
     }
 
-
     form input[type="text"],
     form textarea {
         width: 80%;
@@ -347,3 +360,5 @@
         height: 44px;
     }
 }
+
+/* ダークモード */
